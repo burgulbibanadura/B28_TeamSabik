@@ -26,8 +26,8 @@ public class VehicleContracts_StepDefs {
 
     @When("store managers goes to the Fleet module")
     public void storeManagersGoesToTheFleetModule() {
-       BrowserUtils.sleep(3);
-       BrowserUtils.hover(vehicleContractsPage.FleetModule);
+        BrowserUtils.waitForTitleContains("Dashboard");
+        BrowserUtils.hover(vehicleContractsPage.FleetModule);
 
     }
 
@@ -44,7 +44,7 @@ public class VehicleContracts_StepDefs {
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
         String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
 
-        BrowserUtils.sleep(3);
+        BrowserUtils.waitForTitleContains(expectedTitle);
         BrowserUtils.verifyTitle(expectedTitle);
         BrowserUtils.verifyURLContains(expectedUrl);
 
@@ -63,7 +63,7 @@ public class VehicleContracts_StepDefs {
 
     @When("sales managers goes to the Fleet module")
     public void salesManagersGoesToTheFleetModule() {
-        BrowserUtils.sleep(3);
+        BrowserUtils.waitForTitleContains("Dashboard");
         BrowserUtils.hover(vehicleContractsPage.FleetModule);
     }
 
@@ -72,7 +72,7 @@ public class VehicleContracts_StepDefs {
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
         String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
 
-        BrowserUtils.sleep(3);
+        BrowserUtils.waitForTitleContains(expectedTitle);
         BrowserUtils.verifyTitle(expectedTitle);
         BrowserUtils.verifyURLContains(expectedUrl);
     }
@@ -85,7 +85,7 @@ public class VehicleContracts_StepDefs {
 
     @When("drivers goes to the Fleet module")
     public void driversGoesToTheFleetModule() {
-        BrowserUtils.sleep(3);
+        BrowserUtils.waitForTitleContains("Dashboard");
         BrowserUtils.hover(vehicleContractsPage.FleetModule);
     }
 
