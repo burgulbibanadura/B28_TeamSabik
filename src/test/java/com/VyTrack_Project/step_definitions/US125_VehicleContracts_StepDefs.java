@@ -1,7 +1,7 @@
 package com.VyTrack_Project.step_definitions;
 
 import com.VyTrack_Project.pages.LoginPage;
-import com.VyTrack_Project.pages.VehicleContractsPage;
+import com.VyTrack_Project.pages.US125_VehicleContractsPage;
 import com.VyTrack_Project.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,10 +9,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 
-public class VehicleContracts_StepDefs {
+public class US125_VehicleContracts_StepDefs {
 
     LoginPage login = new LoginPage();
-    VehicleContractsPage vehicleContractsPage = new VehicleContractsPage();
+    US125_VehicleContractsPage US125VehicleContractsPage = new US125_VehicleContractsPage();
 
     @Given("store managers on the login page")
     public void store_managers_on_the_login_page() {
@@ -27,15 +27,15 @@ public class VehicleContracts_StepDefs {
     @When("store managers goes to the Fleet module")
     public void storeManagersGoesToTheFleetModule() {
         BrowserUtils.waitForTitleContains("Dashboard");
-        BrowserUtils.hover(vehicleContractsPage.FleetModule);
+        BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
 
     }
 
     @And("click Vehicle Contracts in the dropdown menu")
     public void clickVehicleContractsInTheDropdownMenu() {
 
-        BrowserUtils.hover(vehicleContractsPage.VehicleContracts);
-        vehicleContractsPage.VehicleContracts.click();
+        BrowserUtils.hover(US125VehicleContractsPage.VehicleContracts);
+        US125VehicleContractsPage.VehicleContracts.click();
     }
 
 
@@ -64,7 +64,7 @@ public class VehicleContracts_StepDefs {
     @When("sales managers goes to the Fleet module")
     public void salesManagersGoesToTheFleetModule() {
         BrowserUtils.waitForTitleContains("Dashboard");
-        BrowserUtils.hover(vehicleContractsPage.FleetModule);
+        BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
     }
 
     @Then("sales managers should see the expected title and url")
@@ -86,11 +86,11 @@ public class VehicleContracts_StepDefs {
     @When("drivers goes to the Fleet module")
     public void driversGoesToTheFleetModule() {
         BrowserUtils.waitForTitleContains("Dashboard");
-        BrowserUtils.hover(vehicleContractsPage.FleetModule);
+        BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
     }
 
     @Then("drivers should see the expected message")
     public void driversShouldSeeTheExpectedMessage() {
-      BrowserUtils.verifyElementDisplayed(vehicleContractsPage.ErrorMessage);
+      BrowserUtils.verifyElementDisplayed(US125VehicleContractsPage.ErrorMessage);
     }
 }
