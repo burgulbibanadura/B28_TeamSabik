@@ -3,19 +3,13 @@ package com.VyTrack_Project.step_definitions;
 import com.VyTrack_Project.pages.LoginPage;
 import com.VyTrack_Project.pages.VehicleContractsPage;
 import com.VyTrack_Project.utilities.BrowserUtils;
-import com.VyTrack_Project.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class VehicleContracts_StepDef {
+public class VehicleContracts_StepDefs {
 
     LoginPage login = new LoginPage();
     VehicleContractsPage vehicleContractsPage = new VehicleContractsPage();
