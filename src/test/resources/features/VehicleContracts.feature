@@ -19,6 +19,8 @@ Feature: Vehicle contracts page
       | storemanager51 |  | UserUser123 |
       | storemanager68 |  | UserUser123 |
       | storemanager99 |  | UserUser123 |
+      | storemanager71 |  | UserUser123 |
+      | storemanager84 |  | UserUser123 |
 
   @SalesManagers
   Scenario Outline: Sales managers access the Vehicle contracts page
@@ -35,6 +37,8 @@ Feature: Vehicle contracts page
       | salesmanager101 |  | UserUser123 |
       | salesmanager144 |  | UserUser123 |
       | salesmanager150 |  | UserUser123 |
+      | salesmanager112 |  | UserUser123 |
+      | salesmanager136 |  | UserUser123 |
 
   @Drivers
   Scenario Outline: Drivers should not able to access the Vehicle contracts page,
@@ -51,3 +55,5 @@ Feature: Vehicle contracts page
       | user1    |  | UserUser123 |
       | user34   |  | UserUser123 |
       | user50   |  | UserUser123 |
+      | user22   |  | UserUser123 |
+      | user47   |  | UserUser123 |
