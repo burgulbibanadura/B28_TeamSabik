@@ -24,10 +24,10 @@ public class VehicleContracts_StepDef {
     public void store_managers_on_the_login_page() {
 
     }
-    @When("store managers enter valid username and password")
-    public void store_managers_enter_valid_username_and_password() {
-      login.userName.sendKeys("storemanager51");
-      login.password.sendKeys("UserUser123" + Keys.ENTER);
+    @When("store managers enter valid {string} and {string}")
+    public void storeManagersEnterValidAnd(String username, String password) {
+        login.userName.sendKeys(username);
+        login.password.sendKeys(password + Keys.ENTER);
     }
 
     @When("store managers goes to the Fleet module")
@@ -45,11 +45,15 @@ public class VehicleContracts_StepDef {
     }
 
 
-    @Then("store managers should see the expected title")
-    public void store_managers_should_see_the_expected_title() {
-       String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
+    @Then("store managers should see the expected title and url")
+    public void storeManagersShouldSeeTheExpectedTitleAndUrl() {
+        String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
+        String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
+
         BrowserUtils.sleep(3);
         BrowserUtils.verifyTitle(expectedTitle);
+        BrowserUtils.verifyURLContains(expectedUrl);
+
     }
 
 
@@ -57,10 +61,10 @@ public class VehicleContracts_StepDef {
     public void salesManagersOnTheLoginPage() {
     }
 
-    @When("sales managers enter valid username and password")
-    public void salesManagersEnterValidUsernameAndPassword() {
-        login.userName.sendKeys("salesmanager101");
-        login.password.sendKeys("UserUser123" + Keys.ENTER);
+    @When("sales managers enter valid {string} and {string}")
+    public void salesManagersEnterValidAnd(String username, String password) {
+        login.userName.sendKeys(username);
+        login.password.sendKeys(password + Keys.ENTER);
     }
 
     @When("sales managers goes to the Fleet module")
@@ -69,17 +73,20 @@ public class VehicleContracts_StepDef {
         BrowserUtils.hover(vehicleContractsPage.FleetModule);
     }
 
-    @Then("sales managers should see the expected title")
-    public void salesManagersShouldSeeTheExpectedTitle() {
+    @Then("sales managers should see the expected title and url")
+    public void salesManagersShouldSeeTheExpectedTitleAndUrl() {
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
+        String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
+
         BrowserUtils.sleep(3);
         BrowserUtils.verifyTitle(expectedTitle);
+        BrowserUtils.verifyURLContains(expectedUrl);
     }
 
-    @When("drivers enter valid username and password")
-    public void driversEnterValidUsernameAndPassword() {
-        login.userName.sendKeys("user1");
-        login.password.sendKeys("UserUser123" + Keys.ENTER);
+    @When("drivers enter valid {string} and {string}")
+    public void driversEnterValidAnd(String username, String password) {
+        login.userName.sendKeys(username);
+        login.password.sendKeys(password + Keys.ENTER);
     }
 
     @When("drivers goes to the Fleet module")
