@@ -12,7 +12,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-public class VehicleCosts_StepDefs {
+public class US116_VehicleCosts_StepDefs {
     LoginPage loginPage = new LoginPage();
     MainPage mainPage = new MainPage();
     Actions actions = new Actions(Driver.getDriver());
