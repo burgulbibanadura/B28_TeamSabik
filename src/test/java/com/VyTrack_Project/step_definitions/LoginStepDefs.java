@@ -33,7 +33,12 @@ public class LoginStepDefs {
 
     @Given("the user logged in with username as {string} and password as {string}")
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-        LoginPage loginPage=new LoginPage();
-        loginPage.login(username,password);
+      LoginPage loginPage=new LoginPage();
+      loginPage.login(username,password);
     }
+
+
+
+
+
 }

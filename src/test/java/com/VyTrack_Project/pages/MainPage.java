@@ -23,5 +23,9 @@ public class MainPage {
     @FindBy(xpath = "//span[.='Vehicle Costs']")
     public WebElement vehicleCostsTabUnderFleet;
 
+    @FindBy(xpath = "//i[@title='Get help']")
+    public WebElement getHelpButton;
+
+
 
 }
