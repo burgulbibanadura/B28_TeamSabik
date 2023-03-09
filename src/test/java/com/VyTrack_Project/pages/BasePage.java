@@ -38,6 +38,9 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+    @FindBy(xpath = "//span[@class='title title-level-1'][normalize-space()='Customers']")
+    public WebElement customersModule;
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
