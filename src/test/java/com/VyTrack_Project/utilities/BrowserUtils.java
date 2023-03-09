@@ -342,10 +342,12 @@ public class BrowserUtils {
      * Clicks on an element using JavaScript
      *
      * @param element
+     * @return
      */
-    public static void clickWithJS(WebElement element) {
+    public static WebElement clickWithJS(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+        return element;
     }
 
 
