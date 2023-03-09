@@ -1,4 +1,4 @@
-@wip
+
 Feature: Manage filters on the Vehicle Costs page
 
   Background: User navigates to login page
