@@ -26,14 +26,13 @@ public class US125_VehicleContracts_StepDefs {
 
     @When("store managers goes to the Fleet module")
     public void storeManagersGoesToTheFleetModule() {
-        BrowserUtils.waitForTitleContains("Dashboard");
+        BrowserUtils.sleep(3);
         BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
 
     }
 
     @And("click Vehicle Contracts in the dropdown menu")
     public void clickVehicleContractsInTheDropdownMenu() {
-
         BrowserUtils.hover(US125VehicleContractsPage.VehicleContracts);
         US125VehicleContractsPage.VehicleContracts.click();
     }
@@ -41,10 +40,11 @@ public class US125_VehicleContracts_StepDefs {
 
     @Then("store managers should see the expected title and url")
     public void storeManagersShouldSeeTheExpectedTitleAndUrl() {
+        BrowserUtils.waitFor(3);
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
         String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
 
-        BrowserUtils.waitForTitleContains(expectedTitle);
+
         BrowserUtils.verifyTitle(expectedTitle);
         BrowserUtils.verifyURLContains(expectedUrl);
 
@@ -63,16 +63,17 @@ public class US125_VehicleContracts_StepDefs {
 
     @When("sales managers goes to the Fleet module")
     public void salesManagersGoesToTheFleetModule() {
-        BrowserUtils.waitForTitleContains("Dashboard");
+        BrowserUtils.waitFor(3);
         BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
     }
 
     @Then("sales managers should see the expected title and url")
     public void salesManagersShouldSeeTheExpectedTitleAndUrl() {
+        BrowserUtils.waitFor(3);
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
         String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
 
-        BrowserUtils.waitForTitleContains(expectedTitle);
+
         BrowserUtils.verifyTitle(expectedTitle);
         BrowserUtils.verifyURLContains(expectedUrl);
     }
@@ -85,7 +86,7 @@ public class US125_VehicleContracts_StepDefs {
 
     @When("drivers goes to the Fleet module")
     public void driversGoesToTheFleetModule() {
-        BrowserUtils.waitForTitleContains("Dashboard");
+        BrowserUtils.waitFor(3);
         BrowserUtils.hover(US125VehicleContractsPage.FleetModule);
     }
 
