@@ -40,9 +40,12 @@ public class US122_VehicleSelection_StepDef {
     @When("the user checks the first checkbox in the web-table")
     public void the_user_checks_the_first_checkbox_in_the_web_table() {
         BrowserUtils.waitFor(3);
+        boolean isCheckedBefore = vehicleSelectionPage.mainCheckBox.isSelected();
         vehicleSelectionPage.mainCheckBox.click();
         BrowserUtils.waitFor(2);
-        vehicleSelectionPage.mainCheckBox.click();
+        boolean isCheckedAfter = vehicleSelectionPage.mainCheckBox.isSelected();
+        Assert.assertTrue("The first checkbox in the web table is not checked", !isCheckedBefore && isCheckedAfter);
+
 
     }
     @When("the user checks any car's checkbox")
