@@ -2,7 +2,7 @@ package com.VyTrack_Project.step_definitions;
 
 import com.VyTrack_Project.pages.LoginPage;
 import com.VyTrack_Project.pages.MainPage;
-import com.VyTrack_Project.pages.VehicleCostsPage;
+import com.VyTrack_Project.pages.US116_VehicleCostsPage;
 import com.VyTrack_Project.utilities.BrowserUtils;
 import com.VyTrack_Project.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -10,13 +10,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class VehicleCosts_StepDefs {
+public class US116_VehicleCosts_StepDefs {
     LoginPage loginPage = new LoginPage();
     MainPage mainPage = new MainPage();
     Actions actions = new Actions(Driver.getDriver());
-    VehicleCostsPage vehicleCostsPage = new VehicleCostsPage();
+    US116_VehicleCostsPage vehicleCostsPage = new US116_VehicleCostsPage();
 
     @Given("user follow sign in")
     public void user_follow_sign_in() {
@@ -66,6 +67,13 @@ public class VehicleCosts_StepDefs {
     @Then("users check the first checkbox to check all the Vehicle Costs")
     public void users_check_the_first_checkbox_to_check_all_the_vehicle_costs() {
         vehicleCostsPage.firstCheckBoxButton.click();
+
+        Assert.assertTrue(vehicleCostsPage.firstCheckBoxButton.isSelected());
+
+        for (WebElement eachCheckbox : vehicleCostsPage.vehicleCosts25checkbox) {
+            Assert.assertTrue(eachCheckbox.isSelected());
+        }
+
     }
 
 

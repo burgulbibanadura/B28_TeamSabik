@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class VehicleCostsPage {
+public class US116_VehicleCostsPage {
 
-    public VehicleCostsPage(){
+    public US116_VehicleCostsPage(){
     PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -25,6 +25,9 @@ public class VehicleCostsPage {
     @FindBy(xpath = "(//table/thead)[1]/tr/th/a/span[.='Date']")
     public WebElement dateColumnHeader;
 
-    @FindBy(xpath = "(//button[@data-toggle='dropdown'])[2]")
+    @FindBy(xpath = "(//button[@data-toggle='dropdown'])[2]/input")
     public WebElement firstCheckBoxButton;
+
+    @FindBy(xpath = "//input[@data-role='select-row-cell']")
+    public List<WebElement> vehicleCosts25checkbox;
 }

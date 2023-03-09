@@ -1,4 +1,4 @@
-@wip
+
 Feature: As a user, I should be access to the Oroinc Documentation page.
 
   Background: User on the login page
