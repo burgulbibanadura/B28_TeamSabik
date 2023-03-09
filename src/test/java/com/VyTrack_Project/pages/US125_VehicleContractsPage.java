@@ -11,7 +11,7 @@ public class US125_VehicleContractsPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (xpath = "(//a[@class='unclickable'])[2]")
+    @FindBy (xpath ="//span[@class='title title-level-1'][normalize-space()='Fleet']")
     public WebElement FleetModule;
 
     @FindBy (xpath="//span[.=\"Vehicle Contracts\"]")

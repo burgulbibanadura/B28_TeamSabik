@@ -42,7 +42,7 @@ public class US125_VehicleContracts_StepDefs {
     public void storeManagersShouldSeeTheExpectedTitleAndUrl() {
         BrowserUtils.waitFor(3);
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
-        String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
+        String expectedUrl = "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract";
 
 
         BrowserUtils.verifyTitle(expectedTitle);
@@ -71,7 +71,7 @@ public class US125_VehicleContracts_StepDefs {
     public void salesManagersShouldSeeTheExpectedTitleAndUrl() {
         BrowserUtils.waitFor(3);
         String expectedTitle = "All - Vehicle Contract - Entities - System - Car - Entities - System";
-        String expectedUrl = "https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract";
+        String expectedUrl = "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract";
 
 
         BrowserUtils.verifyTitle(expectedTitle);

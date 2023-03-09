@@ -11,7 +11,7 @@ Feature: Vehicle contracts page
     And click Vehicle Contracts in the dropdown menu
     Then store managers should see the expected title and url
     #Expected Title : All - Vehicle Contract - Entities - System - Car - Entities - System
-    #Expected URL : https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract
+    #Expected URL : https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract
 
     Examples:
 
@@ -29,7 +29,7 @@ Feature: Vehicle contracts page
     And click Vehicle Contracts in the dropdown menu
     Then sales managers should see the expected title and url
     #Expected Title : All - Vehicle Contract - Entities - System - Car - Entities - System
-    #Expected URL : https://qa2.vytrack.com/entity/Extend_Entity_VehicleContract
+    #Expected URL : https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract
 
     Examples:
 
