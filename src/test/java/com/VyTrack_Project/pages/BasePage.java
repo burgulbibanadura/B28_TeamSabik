@@ -41,6 +41,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[@class='title title-level-1'][normalize-space()='Customers']")
     public WebElement customersModule;
 
+    @FindBy(xpath = "(//li[@class='dropdown dropdown-level-1'])[5]")
+    public WebElement marketingModule;
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
