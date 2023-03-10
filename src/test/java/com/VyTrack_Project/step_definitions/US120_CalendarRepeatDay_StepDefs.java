@@ -6,6 +6,7 @@ import com.VyTrack_Project.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 public class US120_CalendarRepeatDay_StepDefs {
@@ -64,7 +65,7 @@ public class US120_CalendarRepeatDay_StepDefs {
 
   @Then("user is able to see error message if enter number witch is not allowed")
   public void userIsAbleToSeeErrorMessageIfEnterNumberWitchIsNotAllowed() {
-    us09_elements.warningMessageBoth.isDisplayed();
+    Assert.assertTrue(us09_elements.warningMessageBoth.isDisplayed());
     System.out.println(us09_elements.warningMessageBoth.getText());
   }
 

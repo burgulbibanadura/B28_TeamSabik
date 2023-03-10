@@ -37,7 +37,7 @@ Feature: As a user,I should see error messages when I enter an invalid integer i
     Examples:
       | username | password    |
       | user1    | UserUser123 |
-      | user25   | UserUser123 |
+      | user28   | UserUser123 |
       | user50   | UserUser123 |
       | user17   | UserUser123 |
       | user238  | UserUser123 |
